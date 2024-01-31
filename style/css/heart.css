@@ -1,0 +1,100 @@
+.sectHeart{
+    background: #111;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top:30px;
+}
+
+.sectHeart h2{
+    font-size: 2.2rem;
+    color: #fff;
+    font-weight: 500;
+    /* margin-bottom: 20px; */
+    text-align: center;
+}
+
+.sectHeart p{
+    font-size: 0.9rem;
+    color: #d6d6d6;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-align: center;  
+    padding: 12px;
+
+}
+
+
+/* ____________________________________ */
+
+.sectHeart-3 h3{
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+h3 span{
+    font-size: 2.2rem;
+
+    position: relative;
+    animation: displayText 18s infinite;
+    animation-delay: calc(-6s * var(--i));
+
+}
+
+@keyframes displayText {
+
+    0%{
+        display: inline-block;
+    }
+    33.33%,100%{
+        display: none;
+    }
+    
+}
+
+
+h3 span::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    animation: animate 3s linear infinite;
+    /* border-right: 4px solid #fff; */
+    overflow: hidden;
+
+}
+
+@keyframes animate {
+    0%, 10%, 100%{width: 0;}
+    70%, 90%{width: 100%;}
+    
+}
+
+
+
+
+
+@media screen and (min-width: 1000px) {
+
+    .sectHeart h2{
+        font-size: 2.5rem;
+
+    }
+    
+    .sectHeart p{
+        font-size: 1.1rem;
+
+        padding-left: 20%;
+        padding-right: 20%;
+    
+    }
+    
+}
